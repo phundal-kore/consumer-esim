@@ -8,6 +8,7 @@ activate = True
 fleet_sid = "HF07d2aad8192630f5992db70de581f2f1"
 
 # setup auth for connecting to Twilio API
+# ensure these are set in the environment ahead of running this script
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
