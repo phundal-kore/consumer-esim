@@ -40,7 +40,7 @@ print("Activation code: \n\t", qrstring)
 qrimg = qrcode.make(qrstring)
 qrimg.save('QR-' + esim_profile.sid + '.png')
 
-print('QR code: ' + 'QR-' + esim_profile.sid)
+print('\nQR code: \n\t' + 'QR-' + esim_profile.sid + ".png")
 
 # (optional) activate eSIM
 
@@ -48,8 +48,7 @@ print('QR code: ' + 'QR-' + esim_profile.sid)
 if activate:
         esim_profile = client.supersim.v1.sims(sim_sid) \
                         .update(fleet=fleet_sid, status='active')
-
-        print("\tActivated sim: ")
+        print("\n\tDetails of activated sim: ")
         print("\tsid: ",esim_profile.sid)
         print("\tICCID: ", esim_profile.iccid)
         print("\tUnique Name: ", esim_profile.unique_name)
